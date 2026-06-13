@@ -363,6 +363,34 @@ strong{
 }
 .midcta-sub{ margin:12px 0 28px; font-size:13.5px; color:#C4D4C9; }
 
+/* ============ 院内イメージバンド ============ */
+.band{
+  position:relative; overflow:hidden;
+  min-height:clamp(280px, 42vw, 460px);
+  display:flex; align-items:center;
+}
+.band-img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+}
+.band::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(31,66,50,.86) 0%, rgba(31,66,50,.6) 44%, rgba(31,66,50,.08) 100%);
+}
+.band-overlay{
+  position:relative; z-index:1;
+  max-width:1040px; width:100%; margin:0 auto; padding:0 24px;
+  color:var(--cream);
+}
+.band-lead{
+  font-family:var(--display); font-weight:900;
+  font-size:clamp(24px, 3.6vw, 40px); letter-spacing:.06em; line-height:1.45;
+}
+.band-sub{
+  margin-top:16px; max-width:440px;
+  font-size:14px; color:#D9E4DD; line-height:2;
+}
+
 /* ============ 施術の流れ ============ */
 .flow-list{
   list-style:none;
